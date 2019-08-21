@@ -1,0 +1,94 @@
+C51 COMPILER V9.60.0.0   MAIN_FILE                                                         08/21/2019 21:19:12 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN_FILE
+OBJECT MODULE PLACED IN .\Objects\Main file.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Main file.c OPTIMIZE(8,SPEED) PRINT(.\Listings\Main file.lst) TABS(2) OB
+                    -JECT(.\Objects\Main file.obj)
+
+line level    source
+
+   1          /*
+   2          Author: Sakib Ahmed
+   3          */
+   4          #include<reg52.h>
+   5          #include <stdio.h>
+   6          #include <LCD_8bit.h>
+   7          #include <math.h>
+   8          
+   9          #define sound_velocity 34300    /* sound velocity in cm per second */
+  10          
+  11          #define period_in_us pow(10,-6)
+  12          #define Clock_period 1.085*period_in_us   /* period for clock cycle of 8051*/
+  13          
+  14          sbit Trigger_pin=P3^1;          /* Trigger pin */
+  15          sbit Echo_pin=P3^2;             /* Echo pin */
+  16          
+  17          void Delay_us()
+  18          {
+  19   1          TL0=0xF5;
+  20   1          TH0=0xFF;
+  21   1          TR0=1;
+  22   1          while (TF0==0);
+  23   1          TR0=0;
+  24   1          TF0=0;
+  25   1      }
+  26          
+  27          void init_timer(){
+  28   1        TMOD=0x01;                    /*initialize Timer*/
+  29   1        TF0=0;
+  30   1        TR0 = 0;
+  31   1      }
+  32          
+  33          void send_trigger_pulse(){
+  34   1          Trigger_pin= 1;             /* pull trigger pin HIGH */
+  35   1          Delay_us();                 /* provide 10uS Delay*/
+  36   1          Trigger_pin = 0;            /* pull trigger pin LOW*/
+  37   1      }
+  38          
+  39          void main()
+  40          {
+  41   1        float distance_measurement, value;
+  42   1        unsigned char water_level[10];
+  43   1        LCD_Init();                   /* Initialize 16x2 LCD */ 
+  44   1        LCD_String_xy(1,1,"Water Level : ");
+  45   1        init_timer();                 /* Initialize Timer*/
+  46   1        
+  47   1      while(1)
+  48   1      {   
+  49   2          //send_trigger_pulse();       /* send trigger pulse of 10us */  
+  50   2          while(!Echo_pin){           /* Waiting for Echo */
+  51   3          send_trigger_pulse();
+  52   3          TR0 = 1;}                    /* Timer Starts */
+  53   2          while(Echo_pin && !TF0);    /* Waiting for Echo goes LOW */
+  54   2          TR0 = 0;                    /* Stop the timer */
+C51 COMPILER V9.60.0.0   MAIN_FILE                                                         08/21/2019 21:19:12 PAGE 2   
+
+  55   2          
+  56   2          /* calculate distance using timer */
+  57   2          value = Clock_period * sound_velocity; 
+  58   2          distance_measurement = (TL0|(TH0<<8));                    /* read timer register for time count */
+  59   2          distance_measurement = (distance_measurement*value)/2.0;  /* find distance(in cm) */
+  60   2          //distance_measurement = ((139-distance_measurement)/139)*100;
+  61   2      
+  62   2          sprintf(water_level, "%d", (int)distance_measurement);
+  63   2          LCD_String_xy(2,6,water_level);                       /* show distance on 16x2 LCD */
+  64   2          LCD_String("  %  ");    
+  65   2                
+  66   2          delay(100);
+  67   2      }
+  68   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    219    ----
+   CONSTANT SIZE    =     24    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      18
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\Main file.obj",
+".\Objects\LCD_8bit.obj" 
+TO ".\Objects\water-level-ultrasonic" 
+PRINT(".\Listings\water-level-ultrasonic.m51") RAMSIZE(256) 

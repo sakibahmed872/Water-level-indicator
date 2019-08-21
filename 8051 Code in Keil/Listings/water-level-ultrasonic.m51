@@ -1,0 +1,260 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/21/2019  21:19:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Main file.obj, .\Objects\LCD_8bit.obj TO .\Objects\water-le
+>> vel-ultrasonic PRINT (.\Listings\water-level-ultrasonic.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\Main file.obj (MAIN_FILE)
+  .\Objects\LCD_8bit.obj (LCD_8BIT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (POW)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CHKFLOAT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPNEG)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (EXP)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (LOG)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPSERIES)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDCODE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDCODE0)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+
+
+LINK MAP OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+                    0008H     0018H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     002EH     UNIT         _DATA_GROUP_
+            IDATA   0050H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     06ACH     UNIT         ?C?LIB_CODE
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/21/2019  21:19:12  PAGE 2
+
+
+            CODE    0EACH     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    131BH     0135H     UNIT         ?PR?LOG?LOG
+            CODE    1450H     0117H     UNIT         ?PR?_POW?POW
+            CODE    1567H     00BBH     UNIT         ?PR?MAIN?MAIN_FILE
+            CODE    1622H     009AH     UNIT         ?PR?EXP?EXP
+            CODE    16BCH     0030H     UNIT         ?PR?_LCD_STRING_XY?LCD_8BIT
+            CODE    16ECH     002BH     UNIT         ?PR?_LCD_STRING?LCD_8BIT
+            CODE    1717H     0028H     UNIT         ?PR?_DELAY?LCD_8BIT
+            CODE    173FH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    1766H     0020H     UNIT         ?PR?LCD_INIT?LCD_8BIT
+            CODE    1786H     0018H     UNIT         ?CO?MAIN_FILE
+            CODE    179EH     0010H     UNIT         ?PR?DELAY_US?MAIN_FILE
+            CODE    17AEH     000EH     UNIT         ?PR?_LCD_COMMAND?LCD_8BIT
+            CODE    17BCH     000EH     UNIT         ?PR?_LCD_CHAR?LCD_8BIT
+            CODE    17CAH     000CH     UNIT         ?C_C51STARTUP
+            CODE    17D6H     0008H     UNIT         ?PR?INIT_TIMER?MAIN_FILE
+            CODE    17DEH     0008H     UNIT         ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\water-level-ultrasonic (?C_STARTUP)
+
+
+SEGMENT                                     BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                    START    LENGTH     START    LENGTH
+----------------------------------------------------------------------------
+?C_C51STARTUP                            -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN_FILE
+
+?PR?MAIN?MAIN_FILE                       -----    -----      0022H    0012H
+  +--> ?PR?LCD_INIT?LCD_8BIT
+  +--> ?CO?MAIN_FILE
+  +--> ?PR?_LCD_STRING_XY?LCD_8BIT
+  +--> ?PR?INIT_TIMER?MAIN_FILE
+  +--> ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
+  +--> ?PR?_POW?POW
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_LCD_STRING?LCD_8BIT
+  +--> ?PR?_DELAY?LCD_8BIT
+
+?PR?LCD_INIT?LCD_8BIT                    -----    -----      -----    -----
+  +--> ?PR?_DELAY?LCD_8BIT
+  +--> ?PR?_LCD_COMMAND?LCD_8BIT
+
+?PR?_LCD_COMMAND?LCD_8BIT                -----    -----      -----    -----
+  +--> ?PR?_DELAY?LCD_8BIT
+
+?PR?_LCD_STRING_XY?LCD_8BIT              -----    -----      0034H    0005H
+  +--> ?PR?_LCD_COMMAND?LCD_8BIT
+  +--> ?PR?_LCD_STRING?LCD_8BIT
+
+?PR?_LCD_STRING?LCD_8BIT                 -----    -----      0039H    0005H
+  +--> ?PR?_LCD_CHAR?LCD_8BIT
+
+?PR?_LCD_CHAR?LCD_8BIT                   -----    -----      -----    -----
+  +--> ?PR?_DELAY?LCD_8BIT
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/21/2019  21:19:12  PAGE 3
+
+
+?PR?SEND_TRIGGER_PULSE?MAIN_FILE         -----    -----      -----    -----
+  +--> ?PR?DELAY_US?MAIN_FILE
+
+?PR?_POW?POW                             -----    -----      0034H    000AH
+  +--> ?PR?LOG?LOG
+  +--> ?PR?EXP?EXP
+
+?PR?LOG?LOG                              0020H.0  0000H.1    003EH    0004H
+
+?PR?PRINTF?PRINTF                        0020H.0  0001H.1    0034H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C?FPMUL
+  C:0800H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:0909H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:09B0H         PUBLIC        ?C?FCASTC
+  C:09ABH         PUBLIC        ?C?FCASTI
+  C:09A6H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:09E4H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        PRINTF
+  D:0034H         PUBLIC        ?_PRINTF?BYTE
+  D:0034H         PUBLIC        ?_SPRINTF?BYTE
+  C:0F0EH         PUBLIC        _PRINTF
+  C:0F08H         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        POW
+  D:0034H         PUBLIC        ?_pow?BYTE
+  C:1450H         PUBLIC        _pow
+  -------         ENDMOD        POW
+
+  -------         MODULE        ?C?CHKFLOAT
+  C:0A65H         PUBLIC        ?C?CHKFLOAT
+  -------         ENDMOD        ?C?CHKFLOAT
+
+  -------         MODULE        ?C?FPADD
+  C:0A86H         PUBLIC        ?C?FPADD
+  C:0A82H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/21/2019  21:19:12  PAGE 4
+
+
+
+  -------         MODULE        ?C?FPCMP
+  C:0B79H         PUBLIC        ?C?FPCMP
+  C:0B77H         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        ?C?FPNEG
+  C:0BF0H         PUBLIC        ?C?FPNEG
+  -------         ENDMOD        ?C?FPNEG
+
+  -------         MODULE        ?C?FPROUND
+  C:0C01H         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:0C30H         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        EXP
+  C:165AH         PUBLIC        _EXP
+  -------         ENDMOD        EXP
+
+  -------         MODULE        LOG
+  C:134FH         PUBLIC        _LOG
+  C:134BH         PUBLIC        _LOG10
+  -------         ENDMOD        LOG
+
+  -------         MODULE        ?C?FTNPWR
+  C:0D63H         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:0DF0H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0E09H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0E36H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?LNEG
+  C:0E48H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?LLDCODE
+  C:0E56H         PUBLIC        ?C?LLDCODE
+  -------         ENDMOD        ?C?LLDCODE
+
+  -------         MODULE        ?C?LLDCODE0
+  C:0E66H         PUBLIC        ?C?LLDCODE0
+  -------         ENDMOD        ?C?LLDCODE0
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0E76H         PUBLIC        ?C?PLDIIDATA
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/21/2019  21:19:12  PAGE 5
+
+
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0E86H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:173FH         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01C1H BYTE (21%) *
+******************************************************************************
+
+Program Size: data=56.1 xdata=0 code=4073
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
