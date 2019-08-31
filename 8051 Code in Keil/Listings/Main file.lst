@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   MAIN_FILE                                                         08/21/2019 21:19:12 PAGE 1   
+C51 COMPILER V9.60.0.0   MAIN_FILE                                                         08/31/2019 15:15:35 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN_FILE
@@ -60,16 +60,16 @@ line level    source
   50   2          while(!Echo_pin){           /* Waiting for Echo */
   51   3          send_trigger_pulse();
   52   3          TR0 = 1;}                    /* Timer Starts */
-  53   2          while(Echo_pin && !TF0);    /* Waiting for Echo goes LOW */
-  54   2          TR0 = 0;                    /* Stop the timer */
-C51 COMPILER V9.60.0.0   MAIN_FILE                                                         08/21/2019 21:19:12 PAGE 2   
+  53   2          while(Echo_pin){    /* Waiting for Echo goes LOW */
+  54   3          TR0 = 0;}                    /* Stop the timer */
+C51 COMPILER V9.60.0.0   MAIN_FILE                                                         08/31/2019 15:15:35 PAGE 2   
 
   55   2          
   56   2          /* calculate distance using timer */
   57   2          value = Clock_period * sound_velocity; 
   58   2          distance_measurement = (TL0|(TH0<<8));                    /* read timer register for time count */
   59   2          distance_measurement = (distance_measurement*value)/2.0;  /* find distance(in cm) */
-  60   2          //distance_measurement = ((139-distance_measurement)/139)*100;
+  60   2          distance_measurement = ((500-distance_measurement)/500)*100;
   61   2      
   62   2          sprintf(water_level, "%d", (int)distance_measurement);
   63   2          LCD_String_xy(2,6,water_level);                       /* show distance on 16x2 LCD */
@@ -81,7 +81,7 @@ line level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    219    ----
+   CODE SIZE        =    264    ----
    CONSTANT SIZE    =     24    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

@@ -50,14 +50,14 @@ while(1)
 		while(!Echo_pin){           /* Waiting for Echo */
     send_trigger_pulse();
 		TR0 = 1;}                    /* Timer Starts */
-    while(Echo_pin && !TF0);    /* Waiting for Echo goes LOW */
-    TR0 = 0;                    /* Stop the timer */
+    while(Echo_pin){    /* Waiting for Echo goes LOW */
+    TR0 = 0;}                    /* Stop the timer */
 	  
 		/* calculate distance using timer */
 		value = Clock_period * sound_velocity; 
 		distance_measurement = (TL0|(TH0<<8));										/* read timer register for time count */
 		distance_measurement = (distance_measurement*value)/2.0;  /* find distance(in cm) */
-		//distance_measurement = ((139-distance_measurement)/139)*100;
+		distance_measurement = ((500-distance_measurement)/500)*100;
 
 		sprintf(water_level, "%d", (int)distance_measurement);
 		LCD_String_xy(2,6,water_level);												/* show distance on 16x2 LCD */
