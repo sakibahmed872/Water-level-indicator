@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/31/2019  23:35:33  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/01/2019  03:06:53  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -13,17 +13,17 @@ INPUT MODULES INCLUDED:
   .\Objects\STARTUP.obj (?C_STARTUP)
   .\Objects\Main file.obj (MAIN_FILE)
   .\Objects\LCD_8bit.obj (LCD_8BIT)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
-  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (PRINTF)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (POW)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CHKFLOAT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCMP)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPNEG)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPROUND)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
   C:\KEIL_V5\C51\LIB\C51FPS.LIB (EXP)
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     07FDH                  *** GAP ***
             CODE    0800H     06ACH     UNIT         ?C?LIB_CODE
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/31/2019  23:35:33  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 2
 
 
             CODE    0EACH     046FH     UNIT         ?PR?PRINTF?PRINTF
@@ -72,13 +72,13 @@ LINK MAP OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
             CODE    1744H     0028H     UNIT         ?PR?_DELAY?LCD_8BIT
             CODE    176CH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
             CODE    1793H     0020H     UNIT         ?PR?LCD_INIT?LCD_8BIT
-            CODE    17B3H     0018H     UNIT         ?CO?MAIN_FILE
-            CODE    17CBH     0010H     UNIT         ?PR?DELAY_US?MAIN_FILE
-            CODE    17DBH     000EH     UNIT         ?PR?_LCD_COMMAND?LCD_8BIT
-            CODE    17E9H     000EH     UNIT         ?PR?_LCD_CHAR?LCD_8BIT
-            CODE    17F7H     000CH     UNIT         ?C_C51STARTUP
-            CODE    1803H     0008H     UNIT         ?PR?INIT_TIMER?MAIN_FILE
-            CODE    180BH     0008H     UNIT         ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
+            CODE    17B3H     001BH     UNIT         ?CO?MAIN_FILE
+            CODE    17CEH     0010H     UNIT         ?PR?DELAY_US?MAIN_FILE
+            CODE    17DEH     000EH     UNIT         ?PR?_LCD_COMMAND?LCD_8BIT
+            CODE    17ECH     000EH     UNIT         ?PR?_LCD_CHAR?LCD_8BIT
+            CODE    17FAH     000CH     UNIT         ?C_C51STARTUP
+            CODE    1806H     0008H     UNIT         ?PR?INIT_TIMER?MAIN_FILE
+            CODE    180EH     0008H     UNIT         ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
 
 
 
@@ -96,9 +96,10 @@ SEGMENT                                     BIT_GROUP          DATA_GROUP
   +--> ?CO?MAIN_FILE
   +--> ?PR?_LCD_STRING_XY?LCD_8BIT
   +--> ?PR?INIT_TIMER?MAIN_FILE
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?DELAY_US?MAIN_FILE
   +--> ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
   +--> ?PR?_POW?POW
-  +--> ?PR?PRINTF?PRINTF
   +--> ?PR?_LCD_STRING?LCD_8BIT
   +--> ?PR?_DELAY?LCD_8BIT
 
@@ -118,9 +119,12 @@ SEGMENT                                     BIT_GROUP          DATA_GROUP
 
 ?PR?_LCD_CHAR?LCD_8BIT                   -----    -----      -----    -----
   +--> ?PR?_DELAY?LCD_8BIT
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 3
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/31/2019  23:35:33  PAGE 3
 
+
+?PR?PRINTF?PRINTF                        0020H.0  0001H.1    0034H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
 
 ?PR?SEND_TRIGGER_PULSE?MAIN_FILE         -----    -----      -----    -----
   +--> ?PR?DELAY_US?MAIN_FILE
@@ -131,9 +135,6 @@ SEGMENT                                     BIT_GROUP          DATA_GROUP
 
 ?PR?LOG?LOG                              0020H.0  0000H.1    003EH    0004H
 
-?PR?PRINTF?PRINTF                        0020H.0  0001H.1    0034H    001CH
-  +--> ?PR?PUTCHAR?PUTCHAR
-
 
 
 SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
@@ -141,28 +142,19 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        ?C?FPADD
-  C:0807H         PUBLIC        ?C?FPADD
-  C:0803H         PUBLIC        ?C?FPSUB
-  -------         ENDMOD        ?C?FPADD
-
   -------         MODULE        ?C?FPMUL
-  C:08F8H         PUBLIC        ?C?FPMUL
+  C:0800H         PUBLIC        ?C?FPMUL
   -------         ENDMOD        ?C?FPMUL
 
   -------         MODULE        ?C?FPDIV
-  C:0A01H         PUBLIC        ?C?FPDIV
+  C:0909H         PUBLIC        ?C?FPDIV
   -------         ENDMOD        ?C?FPDIV
 
   -------         MODULE        ?C?FCAST
-  C:0AA8H         PUBLIC        ?C?FCASTC
-  C:0AA3H         PUBLIC        ?C?FCASTI
-  C:0A9EH         PUBLIC        ?C?FCASTL
+  C:09B0H         PUBLIC        ?C?FCASTC
+  C:09ABH         PUBLIC        ?C?FCASTI
+  C:09A6H         PUBLIC        ?C?FCASTL
   -------         ENDMOD        ?C?FCAST
-
-  -------         MODULE        ?C?CASTF
-  C:0ADCH         PUBLIC        ?C?CASTF
-  -------         ENDMOD        ?C?CASTF
 
   -------         MODULE        PRINTF
   D:0034H         PUBLIC        ?_PRINTF?BYTE
@@ -177,20 +169,29 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   -------         ENDMOD        POW
 
   -------         MODULE        ?C?CHKFLOAT
-  C:0B5DH         PUBLIC        ?C?CHKFLOAT
+  C:0A2EH         PUBLIC        ?C?CHKFLOAT
   -------         ENDMOD        ?C?CHKFLOAT
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/31/2019  23:35:33  PAGE 4
 
-
+  -------         MODULE        ?C?FPADD
+  C:0A4FH         PUBLIC        ?C?FPADD
+  C:0A4BH         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
 
   -------         MODULE        ?C?FPCMP
-  C:0B79H         PUBLIC        ?C?FPCMP
-  C:0B77H         PUBLIC        ?C?FPCMP3
+  C:0B42H         PUBLIC        ?C?FPCMP
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 4
+
+
+  C:0B40H         PUBLIC        ?C?FPCMP3
   -------         ENDMOD        ?C?FPCMP
 
   -------         MODULE        ?C?FPNEG
-  C:0BF0H         PUBLIC        ?C?FPNEG
+  C:0BB9H         PUBLIC        ?C?FPNEG
   -------         ENDMOD        ?C?FPNEG
+
+  -------         MODULE        ?C?CASTF
+  C:0BCAH         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
 
   -------         MODULE        ?C?FPROUND
   C:0C01H         PUBLIC        ?C?FPROUND
@@ -238,10 +239,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   -------         ENDMOD        ?C?LLDCODE0
 
   -------         MODULE        ?C?PLDIIDATA
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 5
+
+
   C:0E76H         PUBLIC        ?C?PLDIIDATA
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/31/2019  23:35:33  PAGE 5
-
-
   -------         ENDMOD        ?C?PLDIIDATA
 
   -------         MODULE        ?C?CCASE
@@ -253,8 +254,8 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   -------         ENDMOD        PUTCHAR
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01EEH BYTE (24%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01F1H BYTE (24%) *
 ******************************************************************************
 
-Program Size: data=56.1 xdata=0 code=4118
+Program Size: data=56.1 xdata=0 code=4121
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

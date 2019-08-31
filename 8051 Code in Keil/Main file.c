@@ -43,25 +43,27 @@ void main()
 	LCD_Init();										/* Initialize 16x2 LCD */	
 	LCD_String_xy(1,1,"Water Level : ");
 	init_timer();									/* Initialize Timer*/
+	sprintf(water_level, "%.2f", distance_measurement);
+	LCD_String_xy(2,1,water_level);	/* show distance on 16x2 LCD */
+	Delay_us();
 	
 while(1)
-{		
-		//send_trigger_pulse();				/* send trigger pulse of 10us */  
-		while(!Echo_pin){           /* Waiting for Echo */
-    send_trigger_pulse();
-		TR0 = 1;}                    /* Timer Starts */
-    while(Echo_pin){    /* Waiting for Echo goes LOW */
-    TR0 = 0;}                    /* Stop the timer */
+	{		
+		send_trigger_pulse();			/* send trigger pulse of 10us */
+    
+		while(!Echo_pin);           		/* Waiting for Echo */
+		TR0 = 1;                    		/* Timer Starts */
+    while(Echo_pin && !TF0);    		/* Waiting for Echo goes LOW */
+    TR0 = 0;                    		/* Stop the timer */
 	  
 		/* calculate distance using timer */
 		value = Clock_period * sound_velocity; 
-		distance_measurement = (TL0|(TH0<<8));										/* read timer register for time count */
+		distance_measurement = (TL0|(TH0<<8));	/* read timer register for time count */
 		distance_measurement = (distance_measurement*value)/2.0;  /* find distance(in cm) */
-		distance_measurement = ((500-distance_measurement)/500)*100;
-
-		sprintf(water_level, "%d", (int)distance_measurement);
-		LCD_String_xy(2,6,water_level);												/* show distance on 16x2 LCD */
-		LCD_String("  %  ");		
+	
+		sprintf(water_level, "%.2f", distance_measurement);
+		LCD_String_xy(2,1,water_level);	/* show distance on 16x2 LCD */
+		LCD_String("  cm  ");		
 					
 		delay(100);
 }
