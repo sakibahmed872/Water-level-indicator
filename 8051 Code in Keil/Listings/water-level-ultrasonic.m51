@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/01/2019  03:06:53  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/01/2019  13:50:08  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -59,26 +59,26 @@ LINK MAP OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     07FDH                  *** GAP ***
             CODE    0800H     06ACH     UNIT         ?C?LIB_CODE
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  13:50:08  PAGE 2
 
 
             CODE    0EACH     046FH     UNIT         ?PR?PRINTF?PRINTF
             CODE    131BH     0135H     UNIT         ?PR?LOG?LOG
             CODE    1450H     0117H     UNIT         ?PR?_POW?POW
-            CODE    1567H     00E8H     UNIT         ?PR?MAIN?MAIN_FILE
-            CODE    164FH     009AH     UNIT         ?PR?EXP?EXP
-            CODE    16E9H     0030H     UNIT         ?PR?_LCD_STRING_XY?LCD_8BIT
-            CODE    1719H     002BH     UNIT         ?PR?_LCD_STRING?LCD_8BIT
-            CODE    1744H     0028H     UNIT         ?PR?_DELAY?LCD_8BIT
-            CODE    176CH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
-            CODE    1793H     0020H     UNIT         ?PR?LCD_INIT?LCD_8BIT
-            CODE    17B3H     001BH     UNIT         ?CO?MAIN_FILE
-            CODE    17CEH     0010H     UNIT         ?PR?DELAY_US?MAIN_FILE
-            CODE    17DEH     000EH     UNIT         ?PR?_LCD_COMMAND?LCD_8BIT
-            CODE    17ECH     000EH     UNIT         ?PR?_LCD_CHAR?LCD_8BIT
-            CODE    17FAH     000CH     UNIT         ?C_C51STARTUP
-            CODE    1806H     0008H     UNIT         ?PR?INIT_TIMER?MAIN_FILE
-            CODE    180EH     0008H     UNIT         ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
+            CODE    1567H     00BCH     UNIT         ?PR?MAIN?MAIN_FILE
+            CODE    1623H     009AH     UNIT         ?PR?EXP?EXP
+            CODE    16BDH     0030H     UNIT         ?PR?_LCD_STRING_XY?LCD_8BIT
+            CODE    16EDH     002BH     UNIT         ?PR?_LCD_STRING?LCD_8BIT
+            CODE    1718H     0028H     UNIT         ?PR?_DELAY?LCD_8BIT
+            CODE    1740H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    1767H     0020H     UNIT         ?PR?LCD_INIT?LCD_8BIT
+            CODE    1787H     001BH     UNIT         ?CO?MAIN_FILE
+            CODE    17A2H     0010H     UNIT         ?PR?DELAY_US?MAIN_FILE
+            CODE    17B2H     000EH     UNIT         ?PR?_LCD_COMMAND?LCD_8BIT
+            CODE    17C0H     000EH     UNIT         ?PR?_LCD_CHAR?LCD_8BIT
+            CODE    17CEH     000CH     UNIT         ?C_C51STARTUP
+            CODE    17DAH     0008H     UNIT         ?PR?INIT_TIMER?MAIN_FILE
+            CODE    17E2H     0008H     UNIT         ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
 
 
 
@@ -96,10 +96,9 @@ SEGMENT                                     BIT_GROUP          DATA_GROUP
   +--> ?CO?MAIN_FILE
   +--> ?PR?_LCD_STRING_XY?LCD_8BIT
   +--> ?PR?INIT_TIMER?MAIN_FILE
-  +--> ?PR?PRINTF?PRINTF
-  +--> ?PR?DELAY_US?MAIN_FILE
   +--> ?PR?SEND_TRIGGER_PULSE?MAIN_FILE
   +--> ?PR?_POW?POW
+  +--> ?PR?PRINTF?PRINTF
   +--> ?PR?_LCD_STRING?LCD_8BIT
   +--> ?PR?_DELAY?LCD_8BIT
 
@@ -119,12 +118,9 @@ SEGMENT                                     BIT_GROUP          DATA_GROUP
 
 ?PR?_LCD_CHAR?LCD_8BIT                   -----    -----      -----    -----
   +--> ?PR?_DELAY?LCD_8BIT
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 3
 
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  13:50:08  PAGE 3
 
-
-?PR?PRINTF?PRINTF                        0020H.0  0001H.1    0034H    001CH
-  +--> ?PR?PUTCHAR?PUTCHAR
 
 ?PR?SEND_TRIGGER_PULSE?MAIN_FILE         -----    -----      -----    -----
   +--> ?PR?DELAY_US?MAIN_FILE
@@ -134,6 +130,9 @@ SEGMENT                                     BIT_GROUP          DATA_GROUP
   +--> ?PR?EXP?EXP
 
 ?PR?LOG?LOG                              0020H.0  0000H.1    003EH    0004H
+
+?PR?PRINTF?PRINTF                        0020H.0  0001H.1    0034H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
 
 
 
@@ -179,10 +178,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
 
   -------         MODULE        ?C?FPCMP
   C:0B42H         PUBLIC        ?C?FPCMP
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 4
-
-
   C:0B40H         PUBLIC        ?C?FPCMP3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  13:50:08  PAGE 4
+
+
   -------         ENDMOD        ?C?FPCMP
 
   -------         MODULE        ?C?FPNEG
@@ -202,7 +201,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   -------         ENDMOD        ?C?FPCONVERT
 
   -------         MODULE        EXP
-  C:1687H         PUBLIC        _EXP
+  C:165BH         PUBLIC        _EXP
   -------         ENDMOD        EXP
 
   -------         MODULE        LOG
@@ -239,10 +238,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   -------         ENDMOD        ?C?LLDCODE0
 
   -------         MODULE        ?C?PLDIIDATA
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  03:06:53  PAGE 5
-
-
   C:0E76H         PUBLIC        ?C?PLDIIDATA
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/01/2019  13:50:08  PAGE 5
+
+
   -------         ENDMOD        ?C?PLDIIDATA
 
   -------         MODULE        ?C?CCASE
@@ -250,12 +249,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\water-level-ultrasonic (?C_STARTUP)
   -------         ENDMOD        ?C?CCASE
 
   -------         MODULE        PUTCHAR
-  C:176CH         PUBLIC        _PUTCHAR
+  C:1740H         PUBLIC        _PUTCHAR
   -------         ENDMOD        PUTCHAR
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01F1H BYTE (24%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01C5H BYTE (22%) *
 ******************************************************************************
 
-Program Size: data=56.1 xdata=0 code=4121
+Program Size: data=56.1 xdata=0 code=4077
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

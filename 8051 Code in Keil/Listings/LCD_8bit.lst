@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   LCD_8BIT                                                          09/01/2019 01:17:38 PAGE 1   
+C51 COMPILER V9.60.0.0   LCD_8BIT                                                          09/01/2019 13:50:08 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LCD_8BIT
@@ -19,9 +19,9 @@ line level    source
    9          
   10          #define LCD_Data P2
   11          
-  12          sbit RS=P1^2;
+  12          sbit RS=P1^0;
   13          sbit RW=P1^1;
-  14          sbit EN=P1^0;
+  14          sbit EN=P1^2;
   15          
   16          void delay(unsigned int k)
   17          {
@@ -62,7 +62,7 @@ line level    source
   52          
   53          void LCD_String_xy (unsigned char row, unsigned char pos, unsigned char *str) /* Send string to LCD functi
              -on */
-C51 COMPILER V9.60.0.0   LCD_8BIT                                                          09/01/2019 01:17:38 PAGE 2   
+C51 COMPILER V9.60.0.0   LCD_8BIT                                                          09/01/2019 13:50:08 PAGE 2   
 
   54          {
   55   1        if (row == 1)

@@ -43,16 +43,14 @@ void main()
 	LCD_Init();										/* Initialize 16x2 LCD */	
 	LCD_String_xy(1,1,"Water Level : ");
 	init_timer();									/* Initialize Timer*/
-	sprintf(water_level, "%.2f", distance_measurement);
-	LCD_String_xy(2,1,water_level);	/* show distance on 16x2 LCD */
-	Delay_us();
 	
 while(1)
 	{		
-		send_trigger_pulse();			/* send trigger pulse of 10us */
+		//send_trigger_pulse();			/* send trigger pulse of 10us */
     
-		while(!Echo_pin);           		/* Waiting for Echo */
-		TR0 = 1;                    		/* Timer Starts */
+		while(!Echo_pin){
+			send_trigger_pulse();			/* Waiting for Echo */
+			TR0 = 1; }                   		/* Timer Starts */
     while(Echo_pin && !TF0);    		/* Waiting for Echo goes LOW */
     TR0 = 0;                    		/* Stop the timer */
 	  

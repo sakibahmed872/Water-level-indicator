@@ -9,9 +9,9 @@
 
 #define LCD_Data P2
 
-sbit RS=P1^2;
+sbit RS=P1^0;
 sbit RW=P1^1;
-sbit EN=P1^0;
+sbit EN=P1^2;
 
 void delay(unsigned int k)
 {
