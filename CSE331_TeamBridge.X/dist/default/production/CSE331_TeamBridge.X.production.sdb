@@ -1,0 +1,270 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF877A ]
+[d frameptr 0 ]
+"4 G:\CSE331_TeamBridge.X/lcd.h
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"26
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"35
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+"41
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"62
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"81
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"97
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"39 G:\CSE331_TeamBridge.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"641 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf877a.h
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"648
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2656
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"2677
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2680
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2755
+[v _RD2 RD2 `VEb  1 e 0 @66 ]
+"2758
+[v _RD3 RD3 `VEb  1 e 0 @67 ]
+"2761
+[v _RD4 RD4 `VEb  1 e 0 @68 ]
+"2764
+[v _RD5 RD5 `VEb  1 e 0 @69 ]
+"2767
+[v _RD6 RD6 `VEb  1 e 0 @70 ]
+"2770
+[v _RD7 RD7 `VEb  1 e 0 @71 ]
+"2773
+[v _RE0 RE0 `VEb  1 e 0 @72 ]
+"2893
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"2917
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"2938
+[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
+"2941
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"3007
+[v _TRISE0 TRISE0 `VEb  1 e 0 @1096 ]
+"36 G:\CSE331_TeamBridge.X\main.c
+[v _time_taken time_taken `i  1 e 2 0 ]
+"37
+[v _distance distance `i  1 e 2 0 ]
+"38
+[v _d1 d1 `uc  1 e 1 0 ]
+[v _d2 d2 `uc  1 e 1 0 ]
+[v _d3 d3 `uc  1 e 1 0 ]
+"39
+[v _main main `(v  1 e 1 0 ]
+{
+"102
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 62 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 61 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 52 ]
+"70
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S386 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S391 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S394 . 4 `l 1 i 4 0 `d 1 f 4 0 `S386 1 fAsBytes 4 0 `S391 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S394  1 a 4 20 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 14 ]
+[s S463 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S466 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S463 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S466  1 a 2 24 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 19 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 18 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 13 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 46 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 39 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 44 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 51 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 50 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 43 ]
+"8
+[v ___fldiv@a a `d  1 p 4 26 ]
+[v ___fldiv@b b `d  1 p 4 30 ]
+"185
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 1 ]
+[v ___awmod@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 9 ]
+[v ___awmod@dividend dividend `i  1 p 2 11 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"97 G:\CSE331_TeamBridge.X/lcd.h
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"99
+[v Lcd_Write_String@i i `i  1 a 2 9 ]
+"97
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"100
+[v Lcd_Write_String@a a `*.24uc  1 a 1 11 ]
+"102
+} 0
+"81
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@data data `uc  1 a 1 wreg ]
+"93
+[v Lcd_Write_Char@i_69 i `i  1 a 2 7 ]
+"89
+[v Lcd_Write_Char@i i `i  1 a 2 5 ]
+"83
+[v Lcd_Write_Char@Upper_Nibble Upper_Nibble `uc  1 a 1 3 ]
+[v Lcd_Write_Char@Lower_Nibble Lower_Nibble `uc  1 a 1 2 ]
+"81
+[v Lcd_Write_Char@data data `uc  1 a 1 wreg ]
+"84
+[v Lcd_Write_Char@data data `uc  1 a 1 4 ]
+"95
+} 0
+"41
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"43
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 10 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 9 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 8 ]
+"41
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"44
+[v Lcd_Set_Cursor@a a `uc  1 a 1 7 ]
+"60
+} 0
+"62
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"79
+} 0
+"35
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+{
+"39
+} 0
+"26
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"28
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"33
+} 0
+"4
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+"6
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"25
+} 0
